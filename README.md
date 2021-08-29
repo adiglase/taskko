@@ -11,4 +11,4 @@ This is one of my project using Reactjs to practice some important concept that 
 - Fontawesome for icons
 
 ## You can access it at
-### `[https://taskko.vercel.app/](https://taskko.vercel.app/)`
+### [https://taskko.vercel.app/](https://taskko.vercel.app/)
