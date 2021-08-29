@@ -1,10 +1,13 @@
 import TaskItem from "./TaskItem/TaskItem";
 import classes from "./Tasks.module.css";
 import { useEffect, useState } from "react";
+import { useAuth } from "../../store/AuthContext";
 import { database } from "../../firebase/firebase";
 
 const Tasks = (props) => {
 	const [tasks, setTasks] = useState([])
+	
+	const { currentUser } = useAuth();
 
 	const getFullTime = (date, isDateOnly = false) => {
 		const dateString =
@@ -17,13 +20,13 @@ const Tasks = (props) => {
 
 		return isDateOnly ? dateString : `${dateString} ${timeString}`
 	}
-	
+ 
 	useEffect(() => {
 		const dateFilter = props.dateFilter ? props.dateFilter : getFullTime(new Date(), true);
 		const dateFromFilter = new Date(dateFilter + " 00:00:00");
 		const dateToFilter = new Date(dateFilter + " 23:59:59")
 
-		database.getTasks.where("timeFrom", ">=", dateFromFilter).where("timeFrom", "<=", dateToFilter).orderBy("timeFrom", "desc").onSnapshot(snapshot => {
+		database.getTasks.where("uid", "==", currentUser.uid).where("timeFrom", ">=", dateFromFilter).where("timeFrom", "<=", dateToFilter).orderBy("timeFrom", "desc").onSnapshot(snapshot => {
 			const taskList = snapshot.docs.map((doc) => {
 				const formattedTimeFrom = doc.data().timeFrom ? getFullTime(new Date(doc.data().timeFrom.toDate())) : "";
 				const formattedDateFrom = doc.data().timeFrom ? getFullTime(new Date(doc.data().timeFrom.toDate()), true) : "";
@@ -33,7 +36,7 @@ const Tasks = (props) => {
 			})
 			setTasks(taskList);
 		})
-	}, [props.dateFilter])
+	}, [props.dateFilter, currentUser])
 
 	const filteredTask = tasks.filter(function(task){
 		task = task.name.toLowerCase();
@@ -53,7 +56,7 @@ const Tasks = (props) => {
       />
     );
   });
-  return <div className={classes.tasks}>{ tasks && taskList }</div>;
+  return <div className={classes.tasks}>{ currentUser && tasks && taskList }</div>;
 };
 
 export default Tasks;
