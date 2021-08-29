@@ -1,0 +1,13 @@
+.container {
+
+}
+
+.container input {
+  width: 150px;
+  border-radius: 5px;
+  border: 2px solid #eee;
+  font-family: 'Roboto', sans-serif;
+  height: 40px;
+  padding: 5px 15px;
+  font-size: 12px;
+}

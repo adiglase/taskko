@@ -1,0 +1,31 @@
+.mobile-sidebar {
+  position: absolute;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  animation: slide-right 300ms ease-out forwards;
+}
+
+.icon {
+  font-size: 18px;
+  display: block;
+  margin-left: auto;
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobile-sidebar {
+    display: none;
+  }
+}

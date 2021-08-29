@@ -1,0 +1,12 @@
+.time {
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (max-width: 450px) {
+  .time {
+    font-size: 12px;
+  }
+}

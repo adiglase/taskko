@@ -1,0 +1,61 @@
+.item {
+  display: flex;
+  border: 2px solid #9c9fa7;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all .5s;
+  cursor: pointer;
+  min-height: 100px;
+  margin-bottom: 10px;
+}
+
+.item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item:hover {
+  transform: scale(1.01);
+}
+
+.item > div {
+  width: 100%;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 14px;
+  }
+}
+
+.task-status {
+  display: block;
+  font-size: 14px;
+  color: #9c9fa7;
+  text-align: right;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-tags {
+  text-align: right;
+}
+
+.action-tags button {
+  margin-left: 10px;
+}
+
+.tags {
+  display: inline-block;
+  margin: 10px 0;
+}

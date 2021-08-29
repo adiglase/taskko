@@ -1,0 +1,12 @@
+.sidebar {
+  /* border: 2px solid black; */
+  min-width: 300px;
+  background-color: #fbfbfd;
+  padding: 15px 20px; 
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+}

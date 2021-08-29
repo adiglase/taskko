@@ -1,0 +1,15 @@
+.alert {
+  padding: 10px;
+  border-radius: 6px;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  background-color: #ff0f0f;
+  color: #ffffff;
+}

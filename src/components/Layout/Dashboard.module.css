@@ -1,0 +1,37 @@
+.mobile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mobile-header h1 {
+  margin-left: 20px;
+  display: inline-block;
+}
+.tasks-action-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tasks-action-container input {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tasks-action-container button {
+  background-color: #ee5a27;
+  color: #fff;
+  margin-left: auto;
+}
+
+@media (max-width: 515px) {
+  .tasks-action-container button {
+    margin-left: unset;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobile-header {
+    display: none;
+  }
+}

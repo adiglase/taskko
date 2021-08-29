@@ -1,0 +1,19 @@
+.button {
+  height: 40px;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #ee5a27;
+  color: #fff;
+}
+
+.plain {
+  background-color: unset;
+  color: #000000;
+}
