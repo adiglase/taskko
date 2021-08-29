@@ -1,6 +1,6 @@
 # Hi
 
-This is one of my project using Reactjs to practice some important concept that i have just learned.
+This is one of my project using Reactjs to practice some important concept that i have just learned. This is not a fully finished project, I plan to add more feature in the future, like Forget Password, Task Data Visualization, etc.
 
 ## What I Use
 
