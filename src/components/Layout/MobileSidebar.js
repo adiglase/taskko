@@ -8,7 +8,7 @@ const MobileSidebar = (props) => {
     <div className={classes["mobile-sidebar"]}>
       <FontAwesomeIcon icon="times-circle" className={classes.icon} onClick={props.onClose}/>
       <UserProfile />
-      <Navigations />
+      <Navigations onLogout={props.onLogout}/>
     </div>
   );
 };
